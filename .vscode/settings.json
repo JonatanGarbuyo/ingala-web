@@ -1,0 +1,5 @@
+
+//https://code.visualstudio.com/docs/getstarted/settings
+{
+	"eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"]
+}
