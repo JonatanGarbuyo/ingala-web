@@ -1,7 +1,11 @@
-
 //https://code.visualstudio.com/docs/getstarted/settings
 {
+	"files.eol": "\n",
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
 	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.useEditorConfig": false,
 	"files.associations": {
 		"*.astro": "astro"
 	},
