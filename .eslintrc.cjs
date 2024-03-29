@@ -1,25 +1,20 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true
-  },
-  extends: [
-    'standard',
-    'plugin:astro/recommended'
-  ],
-  overrides: [
-    {
-      env: {
-        node: true
-      },
-      files: [
-        '.eslintrc.{js,cjs}'
-      ],
-      parserOptions: {
-        sourceType: 'script'
-      }
-    },
-    {
+	env: {
+		browser: true,
+		es2021: true,
+	},
+	extends: ['standard', 'plugin:astro/recommended'],
+	overrides: [
+		{
+			env: {
+				node: true,
+			},
+			files: ['.eslintrc.{js,cjs}'],
+			parserOptions: {
+				sourceType: 'script',
+			},
+		},
+		{
 			// Define the configuration for `.astro` file.
 			files: ['*.astro'],
 			// Allows Astro components to be parsed.
@@ -35,11 +30,14 @@ module.exports = {
 				// "astro/no-set-html-directive": "error"
 			},
 		},
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
-  },
-  rules: {
-  }
+	],
+	parserOptions: {
+		ecmaVersion: 'latest',
+		sourceType: 'module',
+	},
+	rules: {
+		'no-tabs': 'off',
+		indent: ['error', 'tab', { SwitchCase: 1 }],
+		'comma-dangle': ['error', 'only-multiline'],
+	},
 }
