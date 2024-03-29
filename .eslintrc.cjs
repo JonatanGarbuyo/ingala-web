@@ -39,5 +39,6 @@ module.exports = {
 		'no-tabs': 'off',
 		indent: ['error', 'tab', { SwitchCase: 1 }],
 		'comma-dangle': ['error', 'only-multiline'],
+		'linebreak-style': ['error', 'unix'],
 	},
 }
