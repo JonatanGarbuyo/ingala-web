@@ -4,13 +4,16 @@
 	"editor.tabSize": 2,
 	"editor.insertSpaces": false,
 	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"prettier.useEditorConfig": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"files.associations": {
 		"*.astro": "astro"
 	},
 	"[astro]": {
 		"editor.defaultFormatter": "astro-build.astro-vscode"
 	},
-	"eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"]
+	"eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
