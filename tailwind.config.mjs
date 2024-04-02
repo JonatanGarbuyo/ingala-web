@@ -14,6 +14,7 @@ export default {
 			pink: '#E6B3B6',
 			white: '#FFFFFF',
 			yellow: '#EBB93F',
+			black: '#000000',
 		},
 
 		extend: {
