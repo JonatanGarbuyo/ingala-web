@@ -14,6 +14,7 @@ export default {
 			pink: '#E6B3B6',
 			white: '#FFFFFF',
 			yellow: '#EBB93F',
+			black: '#000000',
 		},
 
 		extend: {
@@ -65,7 +66,7 @@ export default {
 				'poppins-700': ['Poppins-700', ...defaultTheme.fontFamily.sans],
 				'roboto-500': ['Roboto-500', ...defaultTheme.fontFamily.sans],
 				'roboto-700': ['Roboto-500', ...defaultTheme.fontFamily.sans],
-				roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
+				'roboto-400': ['Roboto-400', ...defaultTheme.fontFamily.sans],
 				'roboto-300': ['Roboto-300', ...defaultTheme.fontFamily.sans],
 			},
 		},
