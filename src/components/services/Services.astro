@@ -1,0 +1,22 @@
+---
+import ServicesSlider from './ServicesSlider.astro'
+---
+
+<section
+	class:list={[
+		'after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:bg-[linear-gradient(180deg,_#FFFFFF_-1.66%,_#FFFFFF_-1.65%,_#FFFFFF_-1.64%,_#FFFFFF_-1.63%,_#FFFFFF_54.7%,_rgba(255,_255,_255,_0.2)_98.34%)]',
+		'before:absolute before:left-0 before:-z-10 before:h-full before:w-full before:bg-[url("/images/escalators.png")] before:bg-bottom before:bg-no-repeat before:content-[""]',
+		'relative pb-64 text-center',
+	]}
+>
+	<h2 class="font-poppins-600 mx-auto my-6 text-subtitle">Servicios</h2>
+	<p class="text-xl font-roboto-300 mx-auto my-6">Los servicios que ofrecemos</p>
+	<ServicesSlider />
+	<div
+		class="text-5xl md:text-discover font-poppins-700 mt-28 text-balance leading-relaxed md:mt-56"
+	>
+		<div class="mx-auto max-w-5xl">
+			Discover the <span class="text-blue">best solution</span> for your company
+		</div>
+	</div>
+</section>
