@@ -1,5 +1,5 @@
 <div
-	class="fixed top-0 flex h-[64px] w-full max-w-[1440px] items-center justify-between bg-[white] px-3 py-4 drop-shadow-lg lg:px-7"
+	class="fixed top-0 z-10 flex h-[64px] w-full max-w-[1440px] items-center justify-between bg-[white] px-3 py-4 opacity-95 drop-shadow-lg lg:px-7"
 >
 	<!-- Burger -->
 	<input type="checkbox" id="burger-toggle" class="hidden" />
@@ -14,7 +14,7 @@
 
 	<!-- Logo -->
 	<a href="#">
-		<img src="/public/images/ingala-logo-negro.svg" alt="Logo" class="h-auto w-36" />
+		<img src="/images/ingala-logo-negro.svg" alt="Logo" class="h-auto w-36" />
 	</a>
 
 	<!-- Language -->
@@ -23,15 +23,15 @@
 	>
 		<button class="lg:hidden">Es</button>
 		<button class="hidden lg:block">Español</button>
-		<div class="block h-5 w-0.5 rounded-md bg-black"></div>
+		<div class="bg-black block h-5 w-0.5 rounded-md"></div>
 		<button class="text-black lg:hidden">En</button>
-		<button class="hidden text-black lg:block">English</button>
+		<button class="text-black hidden lg:block">English</button>
 	</div>
 
 	<!-- Menu -->
 	<div
 		id="menu"
-		class="menu absolute left-0 top-[64px] flex h-[100dvh] w-full flex-col gap-8 bg-white p-5 shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.25)] lg:relative lg:top-0 lg:order-2 lg:col-start-2 lg:h-auto lg:w-auto lg:flex-row lg:gap-4 lg:shadow-none xl:gap-16"
+		class="menu bg-white absolute left-0 top-[64px] flex h-[100dvh] w-full flex-col gap-8 p-5 shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.25)] lg:relative lg:top-0 lg:order-2 lg:col-start-2 lg:h-auto lg:w-auto lg:flex-row lg:gap-4 lg:shadow-none xl:gap-16"
 	>
 		<a href="#" class="mb-[-25px] flex justify-end lg:hidden">
 			<svg
