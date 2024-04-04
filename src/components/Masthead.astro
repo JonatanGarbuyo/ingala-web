@@ -23,15 +23,15 @@
 	>
 		<button class="lg:hidden">Es</button>
 		<button class="hidden lg:block">Español</button>
-		<div class="bg-black block h-5 w-0.5 rounded-md"></div>
+		<div class="block h-5 w-0.5 rounded-md bg-black"></div>
 		<button class="text-black lg:hidden">En</button>
-		<button class="text-black hidden lg:block">English</button>
+		<button class="hidden text-black lg:block">English</button>
 	</div>
 
 	<!-- Menu -->
 	<div
 		id="menu"
-		class="menu bg-white absolute left-0 top-[64px] flex h-[100dvh] w-full flex-col gap-8 p-5 shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.25)] lg:relative lg:top-0 lg:order-2 lg:col-start-2 lg:h-auto lg:w-auto lg:flex-row lg:gap-4 lg:shadow-none xl:gap-16"
+		class="menu absolute duration-500 left-0 top-[64px] flex h-[100dvh] w-full flex-col gap-8 bg-white p-5 shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.25)] lg:relative lg:top-0 lg:order-2 lg:col-start-2 lg:h-auto lg:w-auto lg:flex-row lg:gap-4 lg:shadow-none xl:gap-16"
 	>
 		<a href="#" class="mb-[-25px] flex justify-end lg:hidden">
 			<svg
@@ -59,21 +59,34 @@
 <script>
 	document.getElementById('closeNav').addEventListener('click', function () {
 		document.getElementById('burger-toggle').checked = false
+		document.body.style.overflow = ''
 	})
+
 	document.querySelectorAll('a').forEach(function (element) {
 		element.addEventListener('click', function () {
 			document.getElementById('burger-toggle').checked = false
+			document.body.style.overflow = ''
 		})
 	})
+
+	document.getElementById('burger-toggle').addEventListener('change', function () {
+ 	if (this.checked) {
+ 		document.body.style.overflow = 'hidden' // Deshabilita el scroll cuando el menú se abre
+	} else {
+ 		document.body.style.overflow = '' // Restaura el comportamiento de scroll normal cuando el menú se cierra
+	}
+ })
 </script>
 
 <style>
 	#burger-toggle:checked ~ #menu {
-		display: flex;
+		visibility: visible;
+		opacity: 1;
 	}
 
 	#burger-toggle:not(:checked) ~ #menu {
-		display: none;
+		visibility: hidden;
+		opacity: 0;
 	}
 
 	@media screen and (min-width: 1024px) {

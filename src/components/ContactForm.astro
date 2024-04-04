@@ -1,0 +1,207 @@
+---
+import { Image } from 'astro:assets'
+import robot from '../assets/images/contactForm/form-image-1.png'
+import pinkBall from '../assets/images/contactForm/form-image-2.png'
+import woman from '../assets/images/contactForm/form-image-3.png'
+import greenSquare from '../assets/images/contactForm/form-image-4.png'
+---
+
+<div>
+	<div
+		id="form-section"
+		class="relative flex h-fit min-h-[626px] w-full justify-between bg-white xl:h-[580px] xl:min-h-0"
+	>
+		<div
+			id="first-container"
+			class="duration-500 xl:mb-12 xl:flex xl:w-[30%] xl:justify-center xl:self-end"
+		>
+			<Image
+				src={pinkBall}
+				alt="pinkBall image"
+				widths={[80, pinkBall.width]}
+				quality={100}
+				sizes={`(max-width: 768px) 80px, ${pinkBall.width}px `}
+				class="absolute left-7 top-24 w-20 md:left-14 md:top-52 md:w-40 lg:left-24 lg:top-72 lg:w-48 xl:static xl:h-[194px] xl:w-[218px]"
+			/>
+			<Image
+				src={robot}
+				id="robot-image"
+				alt="robot image"
+				widths={[144, robot.width]}
+				quality={100}
+				sizes={`(max-width: 768px) 144px, ${robot.width}px `}
+				class="absolute left-0 top-0 w-36 opacity-100 duration-200 md:w-72 lg:w-96 xl:h-[580px] xl:w-auto"
+			/>
+		</div>
+
+		<div
+			class="mb-44 mt-36 flex w-full flex-col items-center px-4 pb-7 xl:my-12 xl:w-fit xl:justify-center xl:p-0"
+			id="form-container"
+		>
+			<p
+				id="contact-title"
+				class="max-w-[14rem] text-center font-poppins-600 text-4xl leading-[60px] text-yellow lg:max-w-[20rem] lg:text-[50px]"
+			>
+				Ready to get started?
+			</p>
+			<p class="mt-6 text-center font-roboto-400 text-2xl text-darkGreen">Let's get in touch</p>
+			<button
+				id="contact-button"
+				class="mx-auto mt-6 w-full max-w-[22rem] rounded-md border-[1px] border-blue py-2 font-roboto-500 text-base text-blue opacity-100 duration-200 xl:hidden"
+				>CONTACT US
+			</button>
+			<button
+				id="contact-button-desktop"
+				class="mx-auto mt-6 hidden rounded-md border-[1px] border-blue px-28 py-2 font-roboto-500 text-base text-blue opacity-100 duration-200 xl:block"
+				>CONTACT US
+			</button>
+
+			<form
+				action="/enviar"
+				method="post"
+				class="mt-8 flex max-h-0 w-full flex-col overflow-hidden delay-300 duration-[2s] xl:max-w-[700px] xl:flex-row xl:flex-wrap xl:justify-between"
+			>
+				<div
+					id="contact-form-field-1"
+					class="mx-auto mb-4 flex w-full max-w-[22rem] flex-col gap-3 duration-200 xl:mx-0 xl:max-w-80"
+				>
+					<label for="nombre" class="font-roboto-700 text-sm">Nombre</label>
+					<input
+						type="text"
+						id="nombre"
+						name="nombre"
+						placeholder="Ingresar Nombre"
+						required
+						class="rounded-md border-[1px] border-lightGrey py-2 pl-2 text-sm"
+					/>
+				</div>
+				<div
+					id="contact-form-field-2"
+					class="mx-auto mb-4 flex w-full max-w-[22rem] flex-col gap-3 duration-200 xl:mx-0 xl:max-w-80"
+				>
+					<label for="apellido" class="font-roboto-700 text-sm">Apellido</label>
+					<input
+						type="text"
+						id="apellido"
+						name="apellido"
+						placeholder="Ingresar Apellido"
+						required
+						class="rounded-md border-[1px] border-lightGrey py-2 pl-2 text-sm"
+					/>
+				</div>
+				<div
+					id="contact-form-field-3"
+					class="mx-auto mb-4 flex w-full max-w-[22rem] flex-col gap-3 duration-200 xl:mx-0 xl:max-w-80"
+				>
+					<label for="email" class="font-roboto-700 text-sm">Email</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="Ingresar Email"
+						required
+						class="rounded-md border-[1px] border-lightGrey py-2 pl-2 text-sm"
+					/>
+				</div>
+				<div
+					id="contact-form-field-4"
+					class="mx-auto mb-4 flex w-full max-w-[22rem] flex-col gap-3 duration-200 xl:mx-0 xl:max-w-80"
+				>
+					<label for="empresa" class="font-roboto-700 text-sm">Empresa</label>
+					<input
+						type="text"
+						id="empresa"
+						name="empresa"
+						placeholder="Ingresar Empresa"
+						required
+						class="rounded-md border-[1px] border-lightGrey py-2 pl-2 text-sm"
+					/>
+				</div>
+				<div
+					id="contact-form-field-5"
+					class="mx-auto mb-4 flex w-full max-w-[22rem] flex-col gap-3 duration-200 xl:max-w-none"
+				>
+					<label for="consulta" class="font-roboto-700 text-sm">Consulta</label>
+					<textarea
+						id="consulta"
+						name="consulta"
+						placeholder="Ingresar Consulta"
+						required
+						class="rounded-md border-[1px] border-lightGrey py-2 pl-2 text-sm"></textarea>
+				</div>
+				<button
+					type="submit"
+					id="send-button"
+					class="mx-auto mt-6 rounded-md border-[1px] border-blue px-28 py-2 font-roboto-500 text-base text-blue duration-200"
+					>ENVIAR
+				</button>
+			</form>
+		</div>
+
+		<div class="xl:w-[30%]">
+			<Image
+				src={woman}
+				id="woman-image"
+				alt="woman image"
+				quality={100}
+				widths={[144, woman.width]}
+				sizes={`(max-width: 768px) 144px, ${woman.width}px `}
+				class="absolute bottom-0 right-7 z-10 w-36 opacity-100 duration-200 md:right-9 md:w-64 lg:right-16 lg:w-80 xl:h-[580px] xl:w-auto"
+			/>
+			<Image
+				src={greenSquare}
+				id="greenSquare-image"
+				alt="greenSquare image"
+				quality={100}
+				widths={[80, greenSquare.width]}
+				sizes={`(max-width: 768px) 80px, ${greenSquare.width}px `}
+				class="z-10lg:w-40 absolute bottom-24 right-3 w-[70px] opacity-100 duration-200 md:bottom-44 md:w-32 lg:bottom-56 xl:bottom-72 xl:right-8 xl:w-48"
+			/>
+		</div>
+	</div>
+</div>
+<script>
+	const contactButton = document.getElementById('contact-button')
+	const contactButtonDesktop = document.getElementById('contact-button-desktop')
+	const contactForm = document.querySelector('form')
+	const robotImage = document.getElementById('robot-image')
+	const firstContainer = document.getElementById('first-container')
+
+	const title = document.getElementById('contact-title')
+
+	contactButton.addEventListener('click', () => {
+		contactButtonDesktop.style.display = 'none'
+		contactButton.classList.remove('opacity-100')
+		contactButton.classList.add('opacity-0')
+		setTimeout(() => {
+			contactButton.classList.add('hidden')
+		}, 200)
+		contactForm.classList.remove('max-h-0')
+		contactForm.classList.add('max-h-[32rem]')
+	})
+
+	contactButtonDesktop.addEventListener('click', () => {
+		contactButton.style.display = 'none'
+		contactButtonDesktop.classList.remove('opacity-100')
+		contactButtonDesktop.classList.add('opacity-0')
+		robotImage.classList.remove('opacity-100')
+		robotImage.classList.add('opacity-0')
+		firstContainer.classList.remove('xl:w-[30%]')
+		firstContainer.classList.add('xl:w-[20%]')
+		setTimeout(() => {
+			contactButtonDesktop.classList.remove('xl:block')
+			contactButtonDesktop.classList.add('invisible')
+			robotImage.classList.add('hidden')
+			contactButton.classList.add('hidden')
+			title.style.maxWidth = 'none'
+		}, 200)
+		contactForm.classList.remove('max-h-0')
+		contactForm.classList.add('max-h-[32rem]')
+	})
+</script>
+
+<style>
+	textarea {
+		field-sizing: content;
+	}
+</style>
