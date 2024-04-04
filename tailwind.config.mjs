@@ -22,6 +22,14 @@ export default {
 				1440: '1440px',
 			},
 			fontSize: {
+				discover: [
+					'70px',
+					{
+						lineHeight: '85px',
+						letterSpacing: '-0.3px',
+						fontWeight: 700,
+					},
+				],
 				title: [
 					'50px',
 					{
@@ -64,10 +72,10 @@ export default {
 			fontFamily: {
 				'poppins-600': ['Poppins-600', ...defaultTheme.fontFamily.sans],
 				'poppins-700': ['Poppins-700', ...defaultTheme.fontFamily.sans],
+				'roboto-300': ['Roboto-300', ...defaultTheme.fontFamily.sans],
+				'roboto-400': ['Roboto-400', ...defaultTheme.fontFamily.sans],
 				'roboto-500': ['Roboto-500', ...defaultTheme.fontFamily.sans],
 				'roboto-700': ['Roboto-500', ...defaultTheme.fontFamily.sans],
-				'roboto-400': ['Roboto-400', ...defaultTheme.fontFamily.sans],
-				'roboto-300': ['Roboto-300', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},

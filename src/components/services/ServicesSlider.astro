@@ -1,0 +1,40 @@
+---
+import ServicesCard from './ServicesCard.astro'
+
+const cardList = [
+	{
+		title: 'Implementaciones de ArcXP',
+		icon: '/images/icons/atoms.svg',
+		text: 'Llevamos tu plataforma al próximo nivel con el cms de AWS posicionado como uno de los mejores a nivel mundial: ArcXP',
+		href: '/implementations/',
+	},
+	{
+		title: 'Desarrollos Frontend/Backend',
+		icon: '/images/icons/web-dev.svg',
+		text: 'Apis, microservicios y todo un universo de soluciones que pasan por detrás para impulsar los resultados de tu organización',
+		href: '/development/',
+	},
+	{
+		title: 'Automatización e IA',
+		icon: '/images/icons/orbits.svg',
+		text: 'Transformamos procesos repetitivos y con altas posibilidades de error en tareas automatizadas con IA',
+		href: '/automations/',
+	},
+	{
+		title: 'Infraestructura',
+		icon: '/images/icons/cloud.svg',
+		text: 'Armamos la infraestructura cloud que tu empresa necesita, trabajando con providers como GCP o AWS',
+		href: '/infrastructure/',
+	},
+	{
+		title: 'Staff Augmentation',
+		icon: '/images/icons/profile.svg',
+		text: 'Tenemos la persona que tu equipo necesita ',
+		href: '/augmentation/',
+	},
+]
+---
+
+<div class="mx-4 flex snap-x snap-mandatory gap-6 overflow-x-scroll">
+	{cardList.map((card) => <ServicesCard className="snap-center snap-always" {...card} />)}
+</div>

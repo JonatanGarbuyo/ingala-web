@@ -1,11 +1,43 @@
 ---
+import { Image } from 'astro:assets'
+
 import Layout from '../layouts/Layout.astro'
+import Services from '../components/services/Services.astro'
+
+import LinkedinLogo from '../assets/images/linkedin-logo.astro'
+import joinUs from '../assets/images/join-us.jpg'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Ingala">
 	<main>
-		<div class="h-[1000px] w-full bg-pink"></div>
-		<div id="section1" class="h-[1000px] w-full bg-darkGreen"></div>
-		<div id="section2" class="h-[1000px] w-full bg-darkGrey"></div>
+		<Services />
+		<section id="trabaja">
+			<div class="flex flex-col md:flex-row">
+				<div>
+					<Image
+						src={joinUs}
+						alt="Developer at work"
+						class="h-full max-h-[596px] w-full max-w-[770px]"
+					/>
+				</div>
+				<div
+					class="flex w-full flex-col items-center justify-center gap-6 px-6 py-9 text-center text-blue md:max-w-[50%] md:gap-11"
+				>
+					<h2 class="max-w-xl font-poppins-600 text-4xl leading-relaxed lg:text-title">
+						Súmate a nuestro team
+					</h2>
+					<p>Postúlate a nuestras búsquedas</p>
+					<a
+						class="flex items-center gap-6 rounded-md border border-blue py-2 pl-6 pr-12 font-roboto-500 text-button uppercase"
+						href="https://www.linkedin.com/company/ingala-io/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<LinkedinLogo />
+						Búsquedas abiertas
+					</a>
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>
