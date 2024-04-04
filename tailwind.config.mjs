@@ -5,16 +5,17 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		colors: {
+			black: '#000000',
 			blue: '#4f7fe5',
 			darkGreen: '#25864D',
 			darkGrey: '#494949',
 			lightGreen: '#74C26C',
 			lightGrey: '#E7E3E2',
+			mediumGrey: '#141518',
 			orange: '#fd8230',
 			pink: '#E6B3B6',
 			white: '#FFFFFF',
 			yellow: '#EBB93F',
-			black: '#000000',
 		},
 
 		extend: {
