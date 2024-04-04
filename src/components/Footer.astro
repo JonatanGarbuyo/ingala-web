@@ -14,12 +14,12 @@ const linkList = [
 	},
 	{
 		text: 'About us',
-		href: '/about-us',
+		href: '#nosotros',
 		'aria-label': 'About us',
 	},
 	{
 		text: 'Servicios',
-		href: '/servicios',
+		href: '#servicios',
 		'aria-label': 'Servicios',
 	},
 	{
@@ -29,7 +29,7 @@ const linkList = [
 	},
 	{
 		text: 'Contacto',
-		href: '/contacto',
+		href: '#contacto',
 		'aria-label': 'Contacto',
 	},
 	{
@@ -44,7 +44,7 @@ const linkList = [
 	},
 	{
 		text: 'Trabaja con nosotros',
-		href: '/trabaja-con-nosotros',
+		href: '#trabaja',
 		'aria-label': 'Trabaja con nosotros',
 	},
 ]
@@ -57,7 +57,9 @@ const linkList = [
 		<div id="pannel-right" class="text-left">
 			<h1 class="mb-6 font-roboto-500">Secciones</h1>
 			<nav>
-				<ul class="grid gap-3 md:grid-flow-col md:grid-rows-4 md:gap-x-24">
+				<ul
+					class="grid gap-3 min-[375px]:grid-flow-col min-[375px]:grid-rows-4 min-[375px]:gap-x-24"
+				>
 					{
 						linkList.map((link) => (
 							<li>
