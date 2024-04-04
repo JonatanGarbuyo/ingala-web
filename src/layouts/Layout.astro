@@ -1,6 +1,6 @@
 ---
 import Footer from '../components/Footer.astro'
-import Masthead from '../components/masthead/masthead.astro'
+import Masthead from '../components/Masthead.astro'
 
 interface Props {
 	title: string
@@ -19,7 +19,7 @@ const { title } = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="font-roboto-400 max-w-1440 mx-auto mt-16 min-w-80 scroll-smooth pt-[1px]">
+	<body class="mx-auto mt-16 min-w-80 max-w-1440 scroll-smooth pt-[1px] font-roboto-400">
 		<Masthead />
 		<slot />
 		<Footer />
