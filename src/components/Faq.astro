@@ -1,0 +1,46 @@
+---
+interface Props {
+	itemList: [
+		{
+			id: string
+			label: string
+			text: string
+		},
+	]
+}
+
+const { itemList } = Astro.props
+---
+
+<section id="faq" class="relative bg-lightGrey">
+	<div
+		class='flex flex-col gap-5 before:absolute before:left-0 before:-z-0 before:h-full before:w-full before:bg-[url("/images/faq.webp")] before:bg-top before:bg-no-repeat before:content-[""]'
+	>
+		<div
+			class="z-0 mx-auto max-w-[min(600px,_98%)] md:max-w-[min(800px,_90%)] lg:max-w-[min(1040px,_90%)]"
+		>
+			<h2 class="my-6 text-center font-roboto-400 text-2xl">Frequently Asked Question</h2>
+			<ul class="mb-6 flex flex-col">
+				{
+					itemList.map((item) => (
+						<li class="px-4">
+							<input class="peer hidden" type="radio" name="faq" id={item.id} />
+							<label
+								class:list={[
+									'after:inline-block after:h-[40px] after:w-[40px] after:bg-[url("/images/icons/arrow-down.svg")] after:transition-transform after:duration-300  peer-checked:after:rotate-180',
+									'flex max-h-min items-center justify-between rounded bg-blue px-4 py-1 font-roboto-500 text-white',
+								]}
+								for={item.id}
+							>
+								{item.label}
+							</label>
+							<div class="mt-4 max-h-0 overflow-hidden px-4 transition-all duration-300  ease-in-out peer-checked:mb-4 peer-checked:max-h-[166px]">
+								{item.text}
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</section>
