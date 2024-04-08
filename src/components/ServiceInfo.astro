@@ -1,0 +1,87 @@
+---
+import implementationImage from '../assets/images/services/implementations.png'
+import developmentImage from '../assets/images/services/development.png'
+import automationsImage from '../assets/images/services/automations.png'
+import infrastructureImage from '../assets/images/services/infrastructure.png'
+import augmentationImage from '../assets/images/services/augmentation.png'
+import { Image } from 'astro:assets'
+import pinkBall from '../assets/images/pinkBall.png'
+import arrow from '../assets/images/arrow.svg'
+interface Props {
+	service: string
+	serviceData: {
+		title: string
+		subtitle: string
+		shortDescription: string
+		description: string[]
+	}
+}
+const { serviceData, service } = Astro.props
+const { title, subtitle, shortDescription, description } = serviceData
+
+const getImage = () => {
+	if (service === 'implementations') {
+		return implementationImage
+	}
+	if (service === 'development') {
+		return developmentImage
+	}
+	if (service === 'automations') {
+		return automationsImage
+	}
+	if (service === 'infrastructure') {
+		return infrastructureImage
+	}
+	if (service === 'augmentation') {
+		return augmentationImage
+	}
+}
+---
+
+<section class="justify-normal md:grid md:grid-cols-[45%_55%]">
+	<div
+		class="relative aspect-[1/.88] h-full w-full overflow-hidden bg-blue md:flex md:items-center"
+	>
+		<Image
+			src={getImage()}
+			alt="cuadrado"
+			widths={[getImage().width]}
+			quality={100}
+			class="h-fit w-full md:mt-[10%] min-[1000px]:mx-auto min-[1000px]:mt-[15%] min-[1000px]:max-w-[90%]"
+		/>
+	</div>
+	<div class="relative px-4 py-12 md:px-6 xl:px-20">
+		<h1
+			class="relative -ml-3 -mr-4 mb-5 rounded-s-full border-y-2 border-l-2 border-pink pl-3 font-poppins-600 text-[1.8rem] leading-[3.75rem] text-darkGrey md:-mr-6 xl:-ml-6 xl:-mr-20 xl:pl-5 xl:text-5xl xl:leading-[5rem]"
+		>
+			{title}
+		</h1>
+		<Image
+			src={pinkBall}
+			alt="pinkBall image"
+			widths={[80, pinkBall.width]}
+			quality={100}
+			sizes={`(max-width: 768px) 80px, ${pinkBall.width}px `}
+			class="absolute right-0 top-24 w-20 min-[390px]:top-20 md:-right-2 md:top-[4.5rem] md:w-32 xl:top-[4.5rem] xl:w-44"
+		/>
+		<span class="mb-4 block font-poppins-600 text-2xl leading-10 text-blue xl:text-4xl"
+			>{subtitle}</span
+		>
+		<span class="mb-5 block h-1 w-12 bg-lightGrey leading-10"></span>
+		<div
+			class="relative flex flex-col gap-3 pr-12 font-roboto-300 xl:static xl:max-w-[600px] xl:gap-5 xl:pr-16"
+		>
+			<h2 class="font-roboto-500">
+				{shortDescription}
+			</h2>
+			{description.map((paragraph) => <p>{paragraph}</p>)}
+			<Image
+				src={arrow}
+				alt=""
+				widths={[arrow.width]}
+				quality={100}
+				class="xl: absolute bottom-1/2 right-3 translate-y-1/2 xl:bottom-40 xl:right-24"
+			/>
+		</div>
+	</div>
+</section>

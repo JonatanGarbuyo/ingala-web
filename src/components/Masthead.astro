@@ -1,5 +1,5 @@
 <div
-	class="fixed top-0 z-10 flex h-[64px] w-full max-w-[1440px] items-center justify-between bg-[white] px-3 py-4 opacity-95 drop-shadow-lg lg:px-7"
+	class="fixed top-0 z-50 flex h-[64px] w-full max-w-[1440px] items-center justify-between bg-[white] px-3 py-4 opacity-95 drop-shadow-lg lg:px-7"
 >
 	<!-- Burger -->
 	<input type="checkbox" id="burger-toggle" class="hidden" />
@@ -31,7 +31,7 @@
 	<!-- Menu -->
 	<div
 		id="menu"
-		class="menu absolute duration-500 left-0 top-[64px] flex h-[100dvh] w-full flex-col gap-8 bg-white p-5 shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.25)] lg:relative lg:top-0 lg:order-2 lg:col-start-2 lg:h-auto lg:w-auto lg:flex-row lg:gap-4 lg:shadow-none xl:gap-16"
+		class="menu absolute left-0 top-[64px] flex h-[100dvh] w-full flex-col gap-8 bg-white p-5 shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.25)] duration-500 lg:relative lg:top-0 lg:order-2 lg:col-start-2 lg:h-auto lg:w-auto lg:flex-row lg:gap-4 lg:shadow-none xl:gap-16"
 	>
 		<a href="#" class="mb-[-25px] flex justify-end lg:hidden">
 			<svg
@@ -70,12 +70,12 @@
 	})
 
 	document.getElementById('burger-toggle').addEventListener('change', function () {
- 	if (this.checked) {
- 		document.body.style.overflow = 'hidden' // Deshabilita el scroll cuando el menú se abre
-	} else {
- 		document.body.style.overflow = '' // Restaura el comportamiento de scroll normal cuando el menú se cierra
-	}
- })
+		if (this.checked) {
+			document.body.style.overflow = 'hidden' // Deshabilita el scroll cuando el menú se abre
+		} else {
+			document.body.style.overflow = '' // Restaura el comportamiento de scroll normal cuando el menú se cierra
+		}
+	})
 </script>
 
 <style>
@@ -92,7 +92,7 @@
 	@media screen and (min-width: 1024px) {
 		#burger-toggle:not(:checked) ~ #menu {
 			visibility: visible;
-		opacity: 1;
+			opacity: 1;
 		}
 	}
 </style>

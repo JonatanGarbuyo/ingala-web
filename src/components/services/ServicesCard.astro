@@ -13,14 +13,14 @@ const { className, href, icon, text, title } = Astro.props
 <article
 	class:list={[
 		className,
-		'text-white flex min-h-[420px] w-full min-w-[260px] flex-col items-center justify-start rounded-lg bg-blue py-7 text-center',
+		'flex min-h-[420px] w-full min-w-[260px] flex-col items-center justify-start rounded-lg bg-blue py-7 text-center text-white',
 	]}
 >
 	<div>
 		<img class="mb-9" src={icon} alt={icon} />
 	</div>
 	<div class="max-w-[170px] grow">
-		<h3 class="text-base font-roboto-700 mx-auto mb-9 grid h-12 place-items-center uppercase">
+		<h3 class="mx-auto mb-9 grid h-12 place-items-center font-roboto-700 text-base uppercase">
 			{title}
 		</h3>
 		<p class="mx-auto w-[154px] text-pm">{text}</p>
@@ -29,7 +29,7 @@ const { className, href, icon, text, title } = Astro.props
 		href={href}
 		aria-label={title}
 		class:list={[
-			'bg-white font-roboto-500 grid h-10 w-40 place-content-center',
+			'grid h-10 w-40 place-content-center bg-white font-roboto-500',
 			'rounded-md border border-blue text-button uppercase text-blue',
 		]}>Ver más</a
 	>

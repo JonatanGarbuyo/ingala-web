@@ -1,0 +1,158 @@
+{
+	"implementations": {
+		"title": "Implementaciones",
+		"subtitle": "de ArcXP",
+		"shortDescription": "Llevamos tu plataforma al próximo nivel con el cms de AWS posicionado como uno de los mejores a nivel mundial: ArcXP",
+		"description": [
+			"Muchas veces tu producto alcanza un límite, no necesariamente por el producto en sí, sino por donde está montado.",
+			"Y ahí es donde entra ArcXP a solucionarlo, siendo un cms usado por los sitios de medios/ecommerce más visitados del mundo, soportando altísimas concurrencias, brindando una infraestructura sólida y escalable."
+		],
+		"faqs": [
+			{
+				"question": "No cuento con un sitio",
+				"answer": "Contamos con soluciones end-to-end para el diseño desde 0 de tu producto."
+			},
+			{
+				"question": "Ya cuento con un sitio",
+				"answer": "Todos los sitios se pueden migrar al CMS sin problema."
+			},
+			{
+				"question": "¿Qué lenguaje utilizan para programar?",
+				"answer": "Utilizamos JavaScript, puntualmente React, combinado con un framework propio de ArcXP."
+			},
+			{
+				"question": "¿Se puede migrar mi contenido?",
+				"answer": "Contamos con procesos que migran el contenido histórico para garantizar que su sitio siga siendo el mismo."
+			},
+			{
+				"question": "¿Previo a la implementación, brindan asesoría?",
+				"answer": "Te asesoramos en todos los alcances de la herramienta y te decimos cuál es el mejor camino a tomar para la migración de tu sitio."
+			},
+			{
+				"question": "¿Qué sucede posterior a la migración?",
+				"answer": "Una vez hecho el lanzamiento, brindamos acompañamiento técnico y operativo según la necesidad de cada cliente."
+			},
+			{
+				"question": "¿Cuentan con servicios post venta?",
+				"answer": "Puedes contratar nuestros servicios post venta y desarrollar nuevos productos para tu sitio."
+			},
+			{
+				"question": "¿Cuál es su experiencia con ArcXP?",
+				"answer": "Tenemos 4 años de experiencia en empresas de alto nivel a nivel de medios en EEUU y a nivel mundial. Además, somos implementadores avalados por ArcXP con migraciones hechas en tiempo récord y con una tasa del 0% en errores de revisión de código."
+			}
+		]
+	},
+	"development": {
+		"title": "Desarrollos",
+		"subtitle": "Frontend/Backend",
+		"shortDescription": "Apis, microservicios y todo un universo de soluciones que pasan por detrás para impulsar los resultados de tu organización",
+		"description": [
+			"De cara al frontend, desarrollamos tu software de forma end-to-end, dando acompañamiento en el desarrollo tanto de código como a nivel producto y de diseño, usando las mejores herramientas del mercado.",
+			"Lo bueno? Podemos ayudarte en todo.",
+			"Pero no todo es visual. Muchas cosas pasan por detrás y son igual o más importantes que lo que ve el usuario final:",
+			"Conexiones de datos, relaciones entre diferentes plataformas, toma de decisiones y muchas cosas más.",
+			"Por eso también damos soluciones backend a medida de la necesidad de tu organización."
+		],
+		"faqs": [
+			{
+				"question": "Con qué lenguajes trabajan?",
+				"answer": "Trabajamos con JavaScript, Golang, Python y PHP."
+			},
+			{
+				"question": "¿Qué tecnologías Front-end usan?",
+				"answer": "Trabajamos con frameworks como React, Astro, Angular o NextJS para JavaScript. Usamos Laravel para PHP."
+			},
+			{
+				"question": "¿Qué bases de datos usan?",
+				"answer": "Te recomendamos elegir una base de datos según tu presupuesto o la solución a crear, pero si tienes alguna preferencia particular, nos adaptamos a lo que necesites."
+			},
+			{
+				"question": "¿Y qué tecnologías usan para Back-end?",
+				"answer": "Mayormente utilizamos Node.js, Deno, Bun, Gin, Django y PyTorch."
+			},
+			{
+				"question": "No cuento con un sitio",
+				"answer": "Contamos con soluciones end-to-end para el diseño desde 0 de tu producto."
+			}
+		]
+	},
+	"automations": {
+		"title": "Automatización / IA",
+		"subtitle": "Inteligencia artificial",
+		"shortDescription": "Transformamos procesos repetitivos y con altas posibilidades de error en tareas automatizadas con IA",
+		"description": [
+			"Hacemos que tareas repetitivas donde se requiere tiempo humano sean reducidas a procesos automatizados bajando los errores involuntarios propios de cualquier proceso a 0, pudiendo mejorar tus costos de operaciones.",
+			"Dentro de estos procesos podemos nombrar la generación automática de contenido, conexiones con otras fuentes de datos o actualizaciones, por nombrar algunos ejemplos.",
+			"Además, contamos con amplia experiencia en el uso de IA. Y no solo para decir que usamos IA, sino para crear soluciones desde 0 o empoderar tus procesos actuales.",
+			"Y no solo queda en palabras de este texto, hemos desarrollado juegos íntegramente con IA y otro tipo de herramientas que pueden demostrarte el potencial que tenemos en este tipo de desarrollos."
+		],
+		"faqs": [
+			{
+				"question": "¿Qué son procesos RPA?",
+				"answer": "Son procesos de automatización. Podemos tomar tareas repetitivas y convertirlas en procesos automatizados para reducir porcentajes de errores en el proceso y aumentar la productividad de tu organización."
+			},
+			{
+				"question": "¿En qué puede ayudarme la IA?",
+				"answer": "Tenemos desarrollos de copilot y generación de contenidos tanto gráficos como de texto desde 0. También podemos involucrarla en procesos de optimización a tus procesos automatizados."
+			},
+			{
+				"question": "Quiero usar IA pero no sé cómo.",
+				"answer": "No te preocupes, nos cuentas tu idea y nosotros le damos forma."
+			},
+			{
+				"question": "¿Qué importancia tiene la IA en medios?",
+				"answer": "Muchísima. No solo la performance y la velocidad de un sitio es importante para la indexación. La mejora en la inserción de contenido, keywords y muchas cosas más pueden mejorar la posición de tu sitio."
+			}
+		]
+	},
+	"infrastructure": {
+		"title": "Infraestructura",
+		"subtitle": "Servidores y servicios",
+		"shortDescription": "Armamos la infraestructura cloud que tu empresa necesita, trabajando con providers como GCP o AWS",
+		"description": [
+			"Si estando en este año aún contás con servidores virtuales y servicios on-premise, con elevados costos de mantenimiento no solo por su uso, sino por la necesidad de estar con personal detrás de ellos en cualquier horario para solucionar problemas, tenemos la solución.",
+			"Transformamos tu infra a servicios on-demand, autoescalables y autosolucionables, donde solo verás gráficos sin preocuparte por fallas."
+		],
+		"faqs": [
+			{
+				"question": "¿Qué servicios de infraestructura usan?",
+				"answer": "Usamos cloud services como GCP o AWS."
+			},
+			{
+				"question": "¿Realizan servicios on-demand?",
+				"answer": "Sí, nos enfocamos en operar infraestructuras on-demand como microservicios o servicios grandes autoescalables."
+			},
+			{
+				"question": "¿Realizan servicios on-premise?",
+				"answer": "Sí, también trabajamos con servicios on-premise dentro de los cloud providers."
+			},
+			{
+				"question": "¿Qué herramientas de monitoreo operan?",
+				"answer": "Dependiendo de la necesidad, solemos entregarles soluciones de monitoreo en Datadog o Grafana, pero nos adaptamos a tus necesidades."
+			}
+		]
+	},
+	"augmentation": {
+		"title": "Staff Augmentation",
+		"subtitle": "Personal Calificado",
+		"shortDescription": "Tenemos la persona que tu equipo necesita",
+		"description": [
+			"La demanda de personal calificado en IT sabemos que es algo difícil. Los buenos recursos son escasos y muy difíciles de encontrar.",
+			"Nosotros podemos ayudarte con esto, brindándote soluciones de staff augmentation con nuestros recursos."
+		],
+		"faqs": [
+			{
+				"question": "¿Cuáles lenguajes utilizan?",
+				"answer": "Te recomendamos ver la sección de desarrollo frontend/backend o la de infraestructura para este tipo de información."
+			},
+			{
+				"question": "¿Qué tipo de contratos realizan?",
+				"answer": "Nosotros enviamos un recurso nuestro a trabajar en tu equipo. El contrato es a medida de la necesidad."
+			},
+			{
+				"question": "¿Realizan búsqueda de personal?",
+				"answer": "De momento no contamos con dicho servicio."
+			}
+		]
+	}
+}
