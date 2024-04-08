@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from 'astro'
+import ServiceInfo from '../components/ServiceInfo.astro'
+import Services from '../components/services/Services.astro'
+import Layout from '../layouts/Layout.astro'
+import servicesData from '../services.json'
+import Faq from '../components/Faq.astro'
+
+export const getStaticPaths = (() => {
+	return [
+		{ params: { service: 'implementations' } },
+		{ params: { service: 'development' } },
+		{ params: { service: 'automations' } },
+		{ params: { service: 'infrastructure' } },
+		{ params: { service: 'augmentation' } },
+	]
+}) satisfies GetStaticPaths
+
+const serviceData = servicesData[Astro.params.service]
+---
+
+<Layout title="Servicio">
+	<ServiceInfo serviceData={serviceData} service={Astro.params.service} />
+	<Faq faqs={serviceData.faqs} />
+	<Services />
+</Layout>
