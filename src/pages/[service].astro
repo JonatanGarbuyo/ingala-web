@@ -20,7 +20,9 @@ const serviceData = servicesData[Astro.params.service]
 ---
 
 <Layout title="Servicio">
-	<ServiceInfo serviceData={serviceData} service={Astro.params.service} />
-	<Faq faqs={serviceData.faqs} />
-	<Services />
+	<main>
+		<ServiceInfo serviceData={serviceData} service={Astro.params.service} />
+		<Faq faqs={serviceData.faqs} />
+		<Services />
+	</main>
 </Layout>
