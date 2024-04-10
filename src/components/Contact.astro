@@ -6,10 +6,12 @@ import woman from '../assets/images/woman.png'
 import greenSquare from '../assets/images/greenSquare.png'
 ---
 
-<div>
+<div class="relative">
+	<!-- Div hecho para mantener margin cuando vas por link -->
+	<div id="contact" class="invisible absolute -top-[62px] left-0 h-1 w-full"></div>
 	<div
-		id="contacto"
-		class="relative flex h-fit min-h-[626px] w-full justify-between bg-white xl:h-[580px] xl:min-h-0"
+		id="form-section"
+		class="relative mx-auto flex h-fit min-h-[626px] w-full justify-between bg-white xl:h-[580px] xl:min-h-0"
 	>
 		<div
 			id="first-container"
@@ -167,7 +169,6 @@ import greenSquare from '../assets/images/greenSquare.png'
 	const robotImage = document.getElementById('robot-image')
 	const firstContainer = document.getElementById('first-container')
 	const formSection = document.getElementById('form-section')
-
 	const title = document.getElementById('contact-title')
 
 	contactButton.addEventListener('click', () => {
@@ -208,6 +209,9 @@ import greenSquare from '../assets/images/greenSquare.png'
 			contactForm.classList.remove('max-h-[32rem]')
 			contactForm.classList.add('max-h-fit')
 			formSection.classList.remove('xl:h-[580px]')
+			formSection.classList.remove('xl:min-h-0')
+			formSection.classList.add('xl:min-h-[580px]')
+			formSection.classList.add('h-fit')
 		}, 2000)
 	})
 </script>
