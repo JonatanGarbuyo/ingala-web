@@ -14,7 +14,7 @@ const { faqs } = Astro.props
 
 <section id="faq" class="relative bg-lightGrey">
 	<div
-		class='flex flex-col gap-5 before:absolute before:left-0 before:-z-0 before:h-full before:w-full before:bg-[url("/images/faq.webp")] before:bg-top before:bg-no-repeat before:content-[""]'
+		class='flex flex-col gap-5 before:absolute before:left-0 before:-z-0 before:h-full before:w-full before:bg-[url("/images/faq.webp")]  before:bg-right-top before:bg-no-repeat before:content-[""]'
 	>
 		<div
 			class="z-0 mx-auto max-w-[min(600px,_98%)] md:max-w-[min(800px,_90%)] lg:max-w-[min(1040px,_90%)]"
@@ -28,7 +28,7 @@ const { faqs } = Astro.props
 							<label
 								class:list={[
 									'after:inline-block after:h-[40px] after:w-[40px] after:bg-[url("/images/icons/arrow-down.svg")] after:transition-transform after:duration-300  peer-checked:after:rotate-180',
-									'flex max-h-min items-center justify-between rounded bg-blue px-4 py-1 font-roboto-500 text-white',
+									'flex max-h-min cursor-pointer items-center justify-between rounded bg-blue px-4 py-1 font-roboto-500 text-white',
 								]}
 								for={`${id}`}
 							>
