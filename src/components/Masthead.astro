@@ -1,79 +1,104 @@
-<div
-	class="fixed top-0 z-50 flex h-[64px] w-full max-w-[1440px] items-center justify-between bg-[white] px-3 py-4 opacity-95 drop-shadow-lg lg:px-7"
->
-	<!-- Burger -->
-	<input type="checkbox" id="burger-toggle" class="hidden" />
-	<label
-		for="burger-toggle"
-		class="burger flex h-fit w-20 cursor-pointer flex-col justify-start gap-1 lg:hidden"
-	>
-		<span class="block h-1 w-8 rounded-md bg-blue"></span>
-		<span class="block h-1 w-8 rounded-md bg-blue"></span>
-		<span class="block h-1 w-8 rounded-md bg-blue"></span>
-	</label>
-
-	<!-- Logo -->
-	<a href="#">
-		<img src="/images/ingala-logo-negro.svg" alt="Logo" class="h-auto w-36" />
-	</a>
-
-	<!-- Language -->
+<div class="fixed top-0 z-50 h-fit w-full bg-[white] drop-shadow-lg">
 	<div
-		class="languageBox flex h-fit w-20 items-center justify-end gap-3 text-blue lg:order-3 lg:w-36"
+		class="mx-auto flex h-[64px] w-full items-center justify-between bg-[white] px-3 py-4 opacity-95 lg:px-7 min-[1600px]:px-20"
 	>
-		<button class="lg:hidden">Es</button>
-		<button class="hidden lg:block">Español</button>
-		<div class="block h-5 w-0.5 rounded-md bg-black"></div>
-		<button class="text-black lg:hidden">En</button>
-		<button class="hidden text-black lg:block">English</button>
-	</div>
+		<!-- Burger -->
+		<input type="checkbox" id="burger-toggle" class="peer hidden" />
+		<label
+			for="burger-toggle"
+			class="flex h-fit w-20 cursor-pointer flex-col justify-start gap-1 lg:hidden"
+		>
+			<span class="block h-1 w-8 rounded-md bg-blue"></span>
+			<span class="block h-1 w-8 rounded-md bg-blue"></span>
+			<span class="block h-1 w-8 rounded-md bg-blue"></span>
+		</label>
 
-	<!-- Menu -->
-	<div
-		id="menu"
-		class="menu absolute left-0 top-[64px] flex h-[100dvh] w-full flex-col gap-8 bg-white p-5 shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.25)] duration-500 lg:relative lg:top-0 lg:order-2 lg:col-start-2 lg:h-auto lg:w-auto lg:flex-row lg:gap-4 lg:shadow-none xl:gap-16"
-	>
-		<a href="#" class="mb-[-25px] flex justify-end lg:hidden">
-			<svg
-				id="closeNav"
-				width="14"
-				height="14"
-				viewBox="0 0 14 14"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path
-					d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
-					fill="#141518"></path>
-			</svg>
+		<!-- <button
+			id="burger"
+			class="flex h-fit w-20 cursor-pointer flex-col justify-start gap-1 lg:hidden"
+		>
+			<span class="block h-1 w-8 rounded-md bg-blue"></span>
+			<span class="block h-1 w-8 rounded-md bg-blue"></span>
+			<span class="block h-1 w-8 rounded-md bg-blue"></span>
+		</button> -->
+
+		<!-- Logo -->
+		<a href="/">
+			<img src="/images/ingala-logo-negro.svg" alt="Logo" class="h-auto w-36" />
 		</a>
-		<a href="#inicio" class="">Inicio</a>
-		<a href="#nosotros" class="">Sobre Nosotros</a>
-		<a href="#servicios" class="">Servicios</a>
-		<a href="#contacto" class="">Contacto</a>
-		<a href="#clientes" class="">Nuestros Clientes</a>
-		<a href="#trabaja" class="block">Trabaja con nosotros</a>
+
+		<!-- Language -->
+		<div class="flex h-fit w-20 items-center justify-end gap-3 text-blue lg:order-3 lg:w-36">
+			<button class="lg:hidden">Es</button>
+			<button class="hidden lg:block">Español</button>
+			<div class="block h-5 w-0.5 rounded-md bg-black"></div>
+			<button class="text-black lg:hidden">En</button>
+			<button class="hidden text-black lg:block">English</button>
+		</div>
+
+		<!-- Menu -->
+		<div
+			id="menu"
+			class="invisible absolute left-0 top-[64px] flex h-[100dvh] w-full flex-col gap-8 bg-white p-5 opacity-0 shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.25)] duration-500 lg:relative lg:top-0 lg:order-2 lg:col-start-2 lg:h-auto lg:w-auto lg:flex-row lg:gap-4 lg:shadow-none xl:gap-16"
+		>
+			<a href="#" class="mb-[-25px] flex justify-end lg:hidden">
+				<svg
+					id="closeNav"
+					width="14"
+					height="14"
+					viewBox="0 0 14 14"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+						fill="#141518"></path>
+				</svg>
+			</a>
+			<a href="/">Inicio</a>
+			<a href="/#about">Sobre Nosotros</a>
+			<a href="#verticals">Verticales</a>
+			<a href="/#contact">Contacto</a>
+			<!-- <a href="#clientes" >Nuestros Clientes</a> -->
+			<a href="/#work">Trabaja con nosotros</a>
+		</div>
 	</div>
 </div>
 
-<script>
-	document.getElementById('closeNav').addEventListener('click', function () {
-		document.getElementById('burger-toggle').checked = false
-		document.body.style.overflow = ''
-	})
+<script is:inline>
+	const burger = document.getElementById('burger-toggle')
+	const menu = document.getElementById('menu')
+	const links = document.querySelectorAll('a')
 
-	document.querySelectorAll('a').forEach(function (element) {
+	// burger.addEventListener('click', function () {
+	// 	console.log('burger')
+	// 	document.body.classList.toggle('overflow-hidden')
+	// 	menu.classList.toggle('invisible')
+	// 	menu.classList.toggle('opacity-100')
+	// 	menu.classList.toggle('opacity-0')
+	// 	menu.classList.toggle('visible')
+	// })
+	// links.forEach((link) => {
+	// 	link.addEventListener('click', function () {
+	// 		menu.classList.toggle('invisible')
+	// 		menu.classList.toggle('opacity-0')
+	// 	})
+	// })
+	document.getElementById('closeNav').addEventListener('click', function () {
+		burger.checked = false
+		document.body.classList.remove('overflow-hidden')
+	})
+	links.forEach(function (element) {
 		element.addEventListener('click', function () {
-			document.getElementById('burger-toggle').checked = false
-			document.body.style.overflow = ''
+			burger.checked = false
+			document.body.classList.remove('overflow-hidden')
 		})
 	})
-
-	document.getElementById('burger-toggle').addEventListener('change', function () {
+	burger.addEventListener('change', function () {
 		if (this.checked) {
-			document.body.style.overflow = 'hidden' // Deshabilita el scroll cuando el menú se abre
+			document.body.classList.add('overflow-hidden') // Deshabilita el scroll cuando el menú se abre
 		} else {
-			document.body.style.overflow = '' // Restaura el comportamiento de scroll normal cuando el menú se cierra
+			document.body.classList.remove('overflow-hidden') // Restaura el comportamiento de scroll normal cuando el menú se cierra
 		}
 	})
 </script>
@@ -84,10 +109,10 @@
 		opacity: 1;
 	}
 
-	#burger-toggle:not(:checked) ~ #menu {
+	/* #burger-toggle:not(:checked) ~ #menu {
 		visibility: hidden;
 		opacity: 0;
-	}
+	} */
 
 	@media screen and (min-width: 1024px) {
 		#burger-toggle:not(:checked) ~ #menu {
