@@ -14,37 +14,37 @@ const linkList = [
 	},
 	{
 		text: 'About us',
-		href: '#nosotros',
+		href: '#about',
 		'aria-label': 'About us',
 	},
 	{
 		text: 'Servicios',
-		href: '#servicios',
+		href: '#verticals',
 		'aria-label': 'Servicios',
 	},
-	{
-		text: 'Team',
-		href: '/team',
-		'aria-label': 'Team',
-	},
+	// {
+	// 	text: 'Team',
+	// 	href: '/team',
+	// 	'aria-label': 'Team',
+	// },
 	{
 		text: 'Contacto',
-		href: '#contacto',
+		href: '#contact',
 		'aria-label': 'Contacto',
 	},
-	{
-		text: 'FAQ',
-		href: '/faq',
-		'aria-label': 'FAQ',
-	},
-	{
-		text: 'Nuestros clientes',
-		href: '/clientes',
-		'aria-label': 'Nuestros clientes',
-	},
+	// {
+	// 	text: 'FAQ',
+	// 	href: '/faq',
+	// 	'aria-label': 'FAQ',
+	// },
+	// {
+	// 	text: 'Nuestros clientes',
+	// 	href: '/clientes',
+	// 	'aria-label': 'Nuestros clientes',
+	// },
 	{
 		text: 'Trabaja con nosotros',
-		href: '#trabaja',
+		href: '#work',
 		'aria-label': 'Trabaja con nosotros',
 	},
 ]
@@ -52,13 +52,13 @@ const linkList = [
 
 <footer class="mb-4 bg-darkGrey text-center text-sm text-white">
 	<div
-		class="flex flex-col items-center gap-12 p-9 md:flex-row-reverse md:justify-end md:gap-32 md:pl-24"
+		class="flex flex-col items-center gap-12 p-9 md:flex-row-reverse md:justify-end md:gap-32 md:px-7 min-[1600px]:px-20"
 	>
 		<div id="pannel-right" class="text-left">
 			<h1 class="mb-6 font-roboto-500">Secciones</h1>
 			<nav>
 				<ul
-					class="grid gap-3 min-[375px]:grid-flow-col min-[375px]:grid-rows-4 min-[375px]:gap-x-24"
+					class="grid gap-3 min-[375px]:grid-flow-col min-[375px]:grid-rows-3 min-[375px]:gap-x-24 lg:grid-rows-2 xl:grid-rows-1"
 				>
 					{
 						linkList.map((link) => (
