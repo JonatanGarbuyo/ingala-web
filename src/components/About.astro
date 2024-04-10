@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets'
+import aboutUs from '../assets/images/about-us.webp'
+---
+
+<section id="about-container" class="relative w-full bg-lightGrey">
+	<!-- Div hecho para mantener margin cuando vas por link -->
+	<div id="about" class="invisible absolute -top-[65px] left-0 h-1 w-full"></div>
+	<!-- Div para que el borde del title llegue hasta el margen -->
+	<div
+		class="invisible absolute left-0 top-14 h-[84px] w-[50%] border-y-2 border-solid border-blue xl:visible"
+	>
+	</div>
+	<div class="relative z-10 mx-auto max-w-[1440px] items-center bg-lightGrey lg:flex lg:items-end">
+		<div class="flex flex-col items-center pt-14 lg:max-w-[50%]">
+			<h2
+				class:list={[
+					'rounded-full rounded-l-none border-2 border-l-0 border-solid border-blue',
+					'mb-7 self-start px-9 py-3 pl-[30%] md:px-[10%] xl:pl-[20%]',
+					'text-right font-poppins-600 text-4xl font-normal leading-relaxed tracking-tight text-darkGrey xl:h-[84px]',
+				]}
+			>
+				About us
+			</h2>
+
+			<div
+				class="flex flex-col gap-5 px-4 font-roboto-300 text-mediumGrey md:px-[10%] lg:pl-[10%] lg:pr-4 xl:pl-[20%]"
+			>
+				<h3 class="font-roboto-400 text-xl leading-6 text-mediumGrey">
+					Ser los mejores en lo que hacemos, es nuestro objetivo.
+				</h3>
+				<div>
+					<div class="pb-5">
+						<h3 class="font-roboto-400 text-lg leading-6">¿Cómo lo logramos?</h3>
+						<p>Dando todo para lograr ese resultado que buscas.</p>
+					</div>
+					<p>
+						Tenemos experiencia en desarrollo de software y web apps de alta concurrencia, habiendo
+						realizado desarrollos de todo tipo: frontend, backend e infraestructura. Pero no solo
+						somos buenos armando, somos buenos pensando. Nos apasiona crear soluciones que nadie
+						haya creado, o tomar soluciones ya creadas y llevarlas al próximo nivel.
+					</p>
+				</div>
+				<div>
+					<h3 class="font-roboto-400 text-lg leading-6">
+						Eres gigante y quieres seguir creciendo? Estas comenzando y quieres ser un gigante?
+					</h3>
+					<p>
+						Nosotros te acompañamos para que logres esos objetivos que tu organización tiene en
+						mente.
+					</p>
+				</div>
+			</div>
+			<div>
+				<a
+					href="#contact"
+					class:list={[
+						'mx-auto my-8 mt-8 block w-fit rounded-md bg-blue px-24 py-2',
+						'text-center font-roboto-500 text-button text-white',
+					]}>Consúltanos</a
+				>
+			</div>
+		</div>
+		<div>
+			<Image src={aboutUs} alt="nosotros" class="mx-auto" />
+		</div>
+	</div>
+</section>
+<script></script>
