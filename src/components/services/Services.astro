@@ -3,14 +3,16 @@ import ServicesSlider from './ServicesSlider.astro'
 ---
 
 <section
-	id="servicios"
 	class:list={[
 		'after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:bg-[linear-gradient(180deg,_#FFFFFF_-1.66%,_#FFFFFF_-1.65%,_#FFFFFF_-1.64%,_#FFFFFF_-1.63%,_#FFFFFF_54.7%,_rgba(255,_255,_255,_0.2)_98.34%)]',
-		'before:absolute before:left-0 before:-z-10 before:h-full before:w-full before:bg-[url("/images/escalators.png")] before:bg-bottom before:bg-no-repeat before:content-[""]',
-		'relative mb-[-1px] pb-64 text-center',
+		'before:absolute before:left-0 before:-z-10 before:h-full before:w-full before:bg-[url("/images/escalators.png")] before:bg-bottom before:bg-no-repeat before:content-[""] min-[1440px]:before:bg-cover',
+		' relative  mb-[-1px]  pb-64 text-center',
 	]}
 >
+	<!-- Div hecho para mantener margin cuando vas por link -->
+	<div id="verticals" class="invisible absolute -top-[82px] left-0 h-1 w-full"></div>
 	<h2 class="mx-auto my-6 font-poppins-600 text-subtitle">Verticales</h2>
+
 	<p class="mx-auto my-6 font-roboto-300 text-xl">Los servicios que ofrecemos</p>
 	<ServicesSlider />
 	<div

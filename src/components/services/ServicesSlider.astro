@@ -1,6 +1,8 @@
 ---
 import ServicesCard from './ServicesCard.astro'
 
+// import 'swiper/css/bundle'
+
 const cardList = [
 	{
 		title: 'Implementaciones de ArcXP',
@@ -35,6 +37,33 @@ const cardList = [
 ]
 ---
 
-<div class="mx-4 flex snap-x snap-mandatory gap-6 overflow-x-scroll">
-	{cardList.map((card) => <ServicesCard className="snap-center snap-always" {...card} />)}
+<div class="swiper mx-auto max-w-[1440px] overflow-hidden px-5">
+	<!-- Additional required wrapper -->
+	<div
+		class="swiper-wrapper mx-auto flex max-[1440px]:w-fit min-[1440px]:min-w-0 min-[1440px]:justify-between"
+	>
+		<!-- Slides -->
+		{cardList.map((card) => <ServicesCard className="swiper-slide" {...card} />)}
+	</div>
 </div>
+
+<style>
+	.swiper {
+	}
+</style>
+<script>
+	import Swiper from 'swiper'
+
+	const swiper = new Swiper('.swiper', {
+		// Optional parameters
+		direction: 'horizontal',
+		loop: false,
+		spaceBetween: 20,
+		slidesPerView: 'auto',
+		breakpoints: {
+			1440: {
+				spaceBetween: 0,
+			},
+		},
+	})
+</script>

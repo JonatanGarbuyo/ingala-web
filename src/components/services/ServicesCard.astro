@@ -11,9 +11,10 @@ const { className, href, icon, text, title } = Astro.props
 ---
 
 <article
+	id="slide"
 	class:list={[
 		className,
-		'flex min-h-[420px] w-full min-w-[260px] flex-col items-center justify-start rounded-lg bg-blue py-7 text-center text-white',
+		' flex min-h-[420px] w-[260px] flex-col items-center justify-start rounded-lg bg-blue py-7 text-center text-white',
 	]}
 >
 	<div>
@@ -34,3 +35,7 @@ const { className, href, icon, text, title } = Astro.props
 		]}>Ver más</a
 	>
 </article>
+<script>
+	const slide = document.querySelector('#slide')
+	slide.classList.add('last:hidden')
+</script>
